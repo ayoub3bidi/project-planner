@@ -2,20 +2,35 @@
   <div class="home">
     <div v-if="projects.length">
       <div v-for="project in projects" :key="project.id">
-        <p>{{ project.title }}</p>
+        <SingleProject :project="project"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SingleProject from '../components/SingleProject'
 
 export default {
   name: 'Home',
-  components: {},
+  components: { SingleProject },
   data() {
     return {
-      projects: []
+      projects: [
+        {
+            "id": 1,
+            "title": "create new homepage",
+            "details": "lorem ipsum",
+            "complete": false
+        },
+
+        {
+            "id": 2,
+            "title": "send email",
+            "details": "lorem ipsum",
+            "complete": true   
+        }
+      ]
     }
   },
   mounted() {
