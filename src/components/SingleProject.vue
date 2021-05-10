@@ -2,6 +2,11 @@
   <div class="project">
       <div class="actions">
           <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
+          <div class="icons">
+              <i class="far fa-edit"></i>
+              <i class="far fa-trash-alt"></i>
+              <i class="far fa-check-circle"></i>
+          </div>
       </div>
       <div v-if="showDetails" class="details">
           <p>{{ project.details }}</p>
@@ -32,5 +37,19 @@ export default {
     }
     h3 {
         cursor: pointer;
+    }
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .far {
+        font-size: 24px;
+        margin-left: 10px;
+        color: #bbb;
+        cursor: pointer;
+    }
+    .far:hover {
+        color: #777;
     }
 </style>
