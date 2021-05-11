@@ -3,7 +3,9 @@
       <div class="actions">
           <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
           <div class="icons">
-            <i class="far fa-edit"></i>
+              <router-link :to="{ name: 'EditProject', params: { id: project.id } }">
+                <i class="far fa-edit"></i>
+              </router-link>
             <i @click="deleteProject" class="far fa-trash-alt"></i>
             <i @click="itIsDone" class="far fa-check-circle done"></i>
           </div>
