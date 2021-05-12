@@ -16,21 +16,7 @@ export default {
   components: { SingleProject },
   data() {
     return {
-      projects: [
-        {
-            "id": 1,
-            "title": "create new homepage",
-            "details": "lorem ipsum",
-            "complete": false
-        },
-
-        {
-            "id": 2,
-            "title": "send email",
-            "details": "lorem ipsum",
-            "complete": true   
-        }
-      ]
+      projects: []
     }
   },
   mounted() {
